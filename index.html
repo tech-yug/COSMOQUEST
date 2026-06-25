@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COSMOYUG — Explore the Universe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- STARFIELD -->
+<div id="starfield"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">COSMO<span>QUEST</span></div>
+  <ul class="nav-links">
+    <li><a href="#planets">Planets</a></li>
+    <li><a href="#missions">Missions</a></li>
+    <li><a href="#astronauts">Astronauts</a></li>
+    <li><a href="#spacecraft">Spacecraft</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Est. 2026 · Deep Space Exploration</div>
+      <h1 class="hero-title">Explore the <em>Universe</em> Beyond Earth</h1>
+      <p class="hero-desc">Journey through galaxies, discover alien worlds, and witness humanity's greatest adventures in space exploration — all in one immersive interface.</p>
+      <div class="hero-ctas">
+        <a href="#planets" class="btn-primary">Explore Planets</a>
+        <a href="#missions" class="btn-outline">Start Mission</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">8</div>
+          <div class="stat-label">Planets</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">200+</div>
+          <div class="stat-label">Missions</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">600+</div>
+          <div class="stat-label">Astronauts</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Stars</div>
+        </div>
+      </div>
+    </div>
+    <div class="solar-system-hero">
+      <div class="sun"></div>
+      <div class="orbit o1"><div class="orbit-body"></div></div>
+      <div class="orbit o2"><div class="orbit-body"></div></div>
+      <div class="orbit o3"><div class="orbit-body"></div></div>
+      <div class="orbit o4"><div class="orbit-body"></div></div>
+      <div class="orbit o5"><div class="orbit-body"></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PLANETS -->
+<section id="planets">
+  <div class="planets-header reveal">
+    <div class="section-label">Solar System</div>
+    <h2 class="section-title">Planet Explorer</h2>
+    <p class="section-sub">Select a planet to discover its secrets — from scorched Mercury to icy Neptune.</p>
+  </div>
+  <div class="planet-tabs reveal">
+    <button class="planet-tab active" onclick="showPlanet('mercury',this)">Mercury</button>
+    <button class="planet-tab" onclick="showPlanet('venus',this)">Venus</button>
+    <button class="planet-tab" onclick="showPlanet('earth',this)">Earth</button>
+    <button class="planet-tab" onclick="showPlanet('mars',this)">Mars</button>
+    <button class="planet-tab" onclick="showPlanet('jupiter',this)">Jupiter</button>
+    <button class="planet-tab" onclick="showPlanet('saturn',this)">Saturn</button>
+    <button class="planet-tab" onclick="showPlanet('uranus',this)">Uranus</button>
+    <button class="planet-tab" onclick="showPlanet('neptune',this)">Neptune</button>
+  </div>
+  <div class="planet-display reveal" id="planetDisplay">
+    <div class="planet-visual">
+      <div class="planet-sphere mercury-sphere" id="planetSphere"></div>
+    </div>
+    <div class="planet-info">
+      <h2 class="planet-name" id="planetName">Mercury</h2>
+      <div class="planet-nickname" id="planetNick">THE SWIFT PLANET</div>
+      <div class="planet-stats-grid" id="planetStats">
+        <div class="pstat"><div class="pstat-label">Distance from Sun</div><div class="pstat-val">57.9M km</div></div>
+        <div class="pstat"><div class="pstat-label">Diameter</div><div class="pstat-val">4,879 km</div></div>
+        <div class="pstat"><div class="pstat-label">Surface Temp</div><div class="pstat-val">-180°C to 430°C</div></div>
+        <div class="pstat"><div class="pstat-label">Moons</div><div class="pstat-val">0</div></div>
+        <div class="pstat"><div class="pstat-label">Orbital Period</div><div class="pstat-val">88 Earth days</div></div>
+        <div class="pstat"><div class="pstat-label">Gravity</div><div class="pstat-val">3.7 m/s²</div></div>
+      </div>
+      <div class="planet-fact" id="planetFact">Mercury is the smallest planet in our solar system and the closest to the Sun. Despite being closest to the Sun, Venus is actually hotter due to Mercury's lack of atmosphere to trap heat.</div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSIONS -->
+<section id="missions">
+  <div class="missions-header reveal" style="max-width:1400px;margin:0 auto 3rem;">
+    <div class="section-label">History &amp; Future</div>
+    <h2 class="section-title">Space Missions</h2>
+    <p class="section-sub">From the first Moon landing to humanity's next giant leaps — explore the missions that defined our relationship with the cosmos.</p>
+  </div>
+  <div class="missions-grid">
+    <div class="mission-card reveal">
+      <div class="mission-badge">Historic</div>
+      <div class="mission-name">Apollo 11</div>
+      <div class="mission-date">July 20, 1969</div>
+      <div class="mission-desc">The mission that changed everything. Neil Armstrong and Buzz Aldrin became the first humans to walk on the Moon, while Michael Collins orbited above.</div>
+      <div class="mission-meta">
+        <span>Moon Landing</span>
+        <span>8 Days</span>
+      </div>
+    </div>
+    <div class="mission-card reveal">
+      <div class="mission-badge">Ongoing</div>
+      <div class="mission-name">Artemis Program</div>
+      <div class="mission-date">2022 – Present</div>
+      <div class="mission-desc">NASA's ambitious program to return humans to the Moon and establish a sustainable presence — including the first woman and person of color on the lunar surface.</div>
+      <div class="mission-meta">
+        <span>Lunar Return</span>
+        <span>Multiple Phases</span>
+      </div>
+    </div>
+    <div class="mission-card reveal">
+      <div class="mission-badge">Record</div>
+      <div class="mission-name">Voyager 1</div>
+      <div class="mission-date">Sep 5, 1977</div>
+      <div class="mission-desc">The farthest human-made object from Earth. Voyager 1 crossed into interstellar space in 2012 and continues to transmit data from beyond our solar system.</div>
+      <div class="mission-meta">
+        <span>Interstellar</span>
+        <span>47+ Years</span>
+      </div>
+    </div>
+    <div class="mission-card reveal">
+      <div class="mission-badge">Active</div>
+      <div class="mission-name">James Webb Telescope</div>
+      <div class="mission-date">Dec 25, 2021</div>
+      <div class="mission-desc">The most powerful space telescope ever built, capturing light from the earliest galaxies formed just after the Big Bang, 13.6 billion years ago.</div>
+      <div class="mission-meta">
+        <span>Deep Space</span>
+        <span>L2 Orbit</span>
+      </div>
+    </div>
+    <div class="mission-card reveal">
+      <div class="mission-badge">Mars</div>
+      <div class="mission-name">Perseverance Rover</div>
+      <div class="mission-date">Feb 18, 2021</div>
+      <div class="mission-desc">NASA's most advanced Mars rover, searching for signs of ancient microbial life and collecting rock samples to be returned to Earth in a future mission.</div>
+      <div class="mission-meta">
+        <span>Mars Surface</span>
+        <span>Active</span>
+      </div>
+    </div>
+    <div class="mission-card reveal">
+      <div class="mission-badge">Future</div>
+      <div class="mission-name">Mars Human Mission</div>
+      <div class="mission-date">Target: 2030s</div>
+      <div class="mission-desc">SpaceX and NASA are planning crewed missions to Mars. Starship will carry the first humans to set foot on another planet, beginning the multiplanetary era.</div>
+      <div class="mission-meta">
+        <span>Mars Colony</span>
+        <span>Planning Phase</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASTRONAUTS -->
+<section id="astronauts">
+  <div class="astronauts-header reveal">
+    <div class="section-label">Heroes of Space</div>
+    <h2 class="section-title">Legendary Astronauts</h2>
+    <p class="section-sub">The brave men and women who left Earth and expanded what it means to be human.</p>
+  </div>
+  <div class="astronauts-grid">
+    <div class="astro-card reveal">
+      <div class="astro-avatar" style="background:rgba(0,212,255,0.08);">🧑‍🚀</div>
+      <div class="astro-name">Neil Armstrong</div>
+      <div class="astro-nat">🇺🇸 United States</div>
+      <div class="astro-missions">First human to walk on the Moon. Commander of Apollo 11, he took "one small step" on July 20, 1969.</div>
+      <span class="astro-tag">First on Moon</span>
+    </div>
+    <div class="astro-card reveal">
+      <div class="astro-avatar" style="background:rgba(255,107,53,0.08);">👩‍🚀</div>
+      <div class="astro-name">Kalpana Chawla</div>
+      <div class="astro-nat">🇮🇳 India / USA</div>
+      <div class="astro-missions">First woman of Indian origin in space. Flew on STS-87 and STS-107, logging over 30 days in space.</div>
+      <span class="astro-tag">Pioneer</span>
+    </div>
+    <div class="astro-card reveal">
+      <div class="astro-avatar" style="background:rgba(255,215,0,0.08);">🧑‍🚀</div>
+      <div class="astro-name">Yuri Gagarin</div>
+      <div class="astro-nat">🇷🇺 Soviet Union</div>
+      <div class="astro-missions">The first human in space. On April 12, 1961, he orbited Earth aboard Vostok 1, completing one orbit in 108 minutes.</div>
+      <span class="astro-tag">First in Space</span>
+    </div>
+    <div class="astro-card reveal">
+      <div class="astro-avatar" style="background:rgba(90,184,200,0.08);">👩‍🚀</div>
+      <div class="astro-name">Sally Ride</div>
+      <div class="astro-nat">🇺🇸 United States</div>
+      <div class="astro-missions">First American woman in space. Flew on STS-7 in 1983 and championed STEM education for young women throughout her life.</div>
+      <span class="astro-tag">First US Woman</span>
+    </div>
+  </div>
+</section>
+
+<!-- SPACECRAFT -->
+<section id="spacecraft">
+  <div class="spacecraft-header reveal">
+    <div class="section-label">Gallery</div>
+    <h2 class="section-title">Spacecraft Gallery</h2>
+    <p class="section-sub">The engineering marvels that carried humanity's dreams beyond the atmosphere.</p>
+  </div>
+  <div class="spacecraft-grid">
+    <div class="craft-card reveal">
+      <span class="craft-icon">🚀</span>
+      <div class="craft-type">Launch Vehicle</div>
+      <div class="craft-name">Saturn V</div>
+      <div class="craft-desc">The most powerful rocket ever built. Used for Apollo missions 1967–1973, it remains unmatched in lifting capacity and stands as humanity's greatest engineering achievement.</div>
+      <div class="craft-specs">
+        <div class="craft-spec"><span class="craft-spec-k">Height</span><span class="craft-spec-v">111 meters</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Thrust</span><span class="craft-spec-v">34,020 kN</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Payload to LEO</span><span class="craft-spec-v">130,000 kg</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Missions</span><span class="craft-spec-v">13 flights</span></div>
+      </div>
+    </div>
+    <div class="craft-card reveal">
+      <span class="craft-icon">🛸</span>
+      <div class="craft-type">Crew Capsule</div>
+      <div class="craft-name">SpaceX Dragon</div>
+      <div class="craft-desc">The first commercial spacecraft to deliver astronauts to the ISS. Fully reusable, Dragon has revolutionized human spaceflight and resupply missions.</div>
+      <div class="craft-specs">
+        <div class="craft-spec"><span class="craft-spec-k">Crew Capacity</span><span class="craft-spec-v">7 astronauts</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Pressurized Vol.</span><span class="craft-spec-v">9.3 m³</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Launch Vehicle</span><span class="craft-spec-v">Falcon 9</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Reusability</span><span class="craft-spec-v">Yes</span></div>
+      </div>
+    </div>
+    <div class="craft-card reveal">
+      <span class="craft-icon">🛰️</span>
+      <div class="craft-type">Space Station</div>
+      <div class="craft-name">ISS</div>
+      <div class="craft-desc">The International Space Station is a collaborative marvel orbiting Earth at 400 km, hosting rotating crews of astronauts from 19 countries since November 2000.</div>
+      <div class="craft-specs">
+        <div class="craft-spec"><span class="craft-spec-k">Mass</span><span class="craft-spec-v">420,000 kg</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Orbit</span><span class="craft-spec-v">~408 km alt.</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Speed</span><span class="craft-spec-v">7.66 km/s</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Crew</span><span class="craft-spec-v">Up to 7</span></div>
+      </div>
+    </div>
+    <div class="craft-card reveal">
+      <span class="craft-icon">🔭</span>
+      <div class="craft-type">Space Telescope</div>
+      <div class="craft-name">James Webb</div>
+      <div class="craft-desc">Humanity's eye into the deep universe. Webb observes in infrared, peering through dust clouds to see the first stars and galaxies formed after the Big Bang.</div>
+      <div class="craft-specs">
+        <div class="craft-spec"><span class="craft-spec-k">Mirror Diameter</span><span class="craft-spec-v">6.5 meters</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Orbit</span><span class="craft-spec-v">L2 Point</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Wavelength</span><span class="craft-spec-v">0.6–28 μm</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Launch</span><span class="craft-spec-v">Dec 2021</span></div>
+      </div>
+    </div>
+    <div class="craft-card reveal">
+      <span class="craft-icon">🌌</span>
+      <div class="craft-type">Interstellar Probe</div>
+      <div class="craft-name">Voyager 1</div>
+      <div class="craft-desc">The most distant human-made object in existence, now in interstellar space. Launched in 1977, it still sends data from over 23 billion kilometers away.</div>
+      <div class="craft-specs">
+        <div class="craft-spec"><span class="craft-spec-k">Distance</span><span class="craft-spec-v">23+ billion km</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Speed</span><span class="craft-spec-v">17 km/s</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Power</span><span class="craft-spec-v">RTG nuclear</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Status</span><span class="craft-spec-v">Active</span></div>
+      </div>
+    </div>
+    <div class="craft-card reveal">
+      <span class="craft-icon">🚀</span>
+      <div class="craft-type">Super Heavy Lift</div>
+      <div class="craft-name">Starship</div>
+      <div class="craft-desc">SpaceX's fully reusable megarocket, designed to carry humans to Mars and beyond. Standing 120m tall, it is the largest and most powerful rocket ever flown.</div>
+      <div class="craft-specs">
+        <div class="craft-spec"><span class="craft-spec-k">Height</span><span class="craft-spec-v">120 meters</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Thrust</span><span class="craft-spec-v">74,360 kN</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Payload to LEO</span><span class="craft-spec-v">150,000 kg</span></div>
+        <div class="craft-spec"><span class="craft-spec-k">Destination</span><span class="craft-spec-v">Moon / Mars</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+
+    <!-- Top: headline + intro -->
+    <div class="about-hero reveal">
+      <div class="section-label">About CosmoQuest</div>
+      <h2 class="section-title">Where Curiosity<br>Meets the <em style="font-style:normal;color:var(--cyan);text-shadow:0 0 20px rgba(0,212,255,0.4);">Cosmos</em></h2>
+      <p class="about-intro">CosmoQuest is a futuristic, immersive space exploration interface built to inspire a new generation of space enthusiasts, students, and dreamers. We believe the universe should be accessible to everyone — not just scientists and astronauts — so we brought it to your screen in the most beautiful way we know how.</p>
+    </div>
+
+    <!-- Mission statement banner -->
+    <div class="about-mission reveal">
+      <div class="mission-quote">
+        <span class="quote-mark">"</span>
+        The universe is under no obligation to make sense to you — but we are.
+        <span class="quote-mark">"</span>
+      </div>
+      <div class="mission-attr">— CosmoQuest Mission Statement</div>
+    </div>
+
+    <!-- What is this website -->
+    <div class="about-block reveal">
+      <div class="about-block-icon">🌌</div>
+      <div class="about-block-body">
+        <h3 class="about-block-title">What Is CosmoQuest?</h3>
+        <p>CosmoQuest is a Space Explorer Interface Website — a fully interactive, visually rich digital experience that lets users journey through our solar system and beyond. It is not just a website; it is a simulation of space travel, a living encyclopedia of the cosmos, and an educational platform rolled into one futuristic interface.</p>
+        <p>Whether you want to spin through the eight planets of our solar system, relive the legendary Apollo 11 Moon landing, learn about the astronauts who risked everything to reach the stars, or marvel at the engineering genius of humanity's greatest spacecraft — CosmoQuest puts it all at your fingertips, presented with the immersive design it deserves.</p>
+      </div>
+    </div>
+
+    <!-- Purpose -->
+    <div class="about-block reveal">
+      <div class="about-block-icon">🚀</div>
+      <div class="about-block-body">
+        <h3 class="about-block-title">Our Purpose</h3>
+        <p>Space exploration is one of humanity's greatest achievements, yet most people experience it only through dry textbooks or dense scientific papers. CosmoQuest was built with a single clear purpose: to make space exploration <strong>exciting, educational, and immersive</strong> for absolutely everyone.</p>
+        <p>We want a 10-year-old in a classroom to feel the same wonder as a NASA scientist when they look at the stars. We want a curious adult to finally understand what makes Jupiter's Great Red Spot so extraordinary, or why Voyager 1 — launched in 1977 — is still sending data from beyond our solar system today. CosmoQuest exists to bridge the gap between raw cosmic data and human emotion.</p>
+      </div>
+    </div>
+
+    <!-- Features grid -->
+    <div class="about-features-header reveal">
+      <div class="section-label">What's Inside</div>
+      <h3 class="section-title" style="font-size:clamp(1.4rem,3vw,2rem);">Everything the Universe Has to Offer</h3>
+    </div>
+    <div class="about-features reveal">
+      <div class="afeature">
+        <div class="afeature-icon">🪐</div>
+        <h4 class="afeature-title">Planet Explorer</h4>
+        <p class="afeature-desc">All 8 planets of our solar system rendered in animated CSS with accurate colors, Saturn's iconic rings, and full data panels — distance, gravity, temperature, moons, orbital period and fascinating facts for each world.</p>
+      </div>
+      <div class="afeature">
+        <div class="afeature-icon">🛸</div>
+        <h4 class="afeature-title">Space Missions</h4>
+        <p class="afeature-desc">From Apollo 11's historic Moon landing in 1969 to the ongoing Artemis program and SpaceX's vision for Mars — explore 6 landmark missions with launch dates, objectives, and mission status badges.</p>
+      </div>
+      <div class="afeature">
+        <div class="afeature-icon">👩‍🚀</div>
+        <h4 class="afeature-title">Astronaut Hall of Fame</h4>
+        <p class="afeature-desc">Meet the legends who left Earth — Neil Armstrong, Kalpana Chawla, Yuri Gagarin, Sally Ride, and more. Each profile covers nationality, career highlights, and the milestone that made them immortal.</p>
+      </div>
+      <div class="afeature">
+        <div class="afeature-icon">🛰️</div>
+        <h4 class="afeature-title">Spacecraft Gallery</h4>
+        <p class="afeature-desc">Six iconic spacecraft from Saturn V to Starship, the ISS to James Webb — complete with technical specs including thrust, payload capacity, crew size, orbit details, and mission history.</p>
+      </div>
+      <div class="afeature">
+        <div class="afeature-icon">✨</div>
+        <h4 class="afeature-title">Live Starfield</h4>
+        <p class="afeature-desc">280 individually animated stars fill the background, each twinkling at its own rhythm. Move your mouse and the entire starfield parallax-shifts, making you feel like you're genuinely drifting through space.</p>
+      </div>
+      <div class="afeature">
+        <div class="afeature-icon">🌀</div>
+        <h4 class="afeature-title">Solar System Animation</h4>
+        <p class="afeature-desc">A live CSS-animated solar system sits in the hero section — Mercury through Jupiter orbiting the glowing Sun in real-time, each planet at a speed proportional to its actual orbital period.</p>
+      </div>
+    </div>
+
+    <!-- Design philosophy -->
+    <div class="about-block reveal">
+      <div class="about-block-icon">🎨</div>
+      <div class="about-block-body">
+        <h3 class="about-block-title">Design Philosophy</h3>
+        <p>Every pixel of CosmoQuest was crafted to evoke the feeling of deep space. The colour palette is built from <strong>void black (#050810)</strong>, <strong>nebula purple (#1a0a2e)</strong>, <strong>stellar cyan (#00d4ff)</strong> and <strong>nova gold (#ffd700)</strong> — colours that feel like starlight reflected in the dark.</p>
+        <p>Typography is led by <strong>Orbitron</strong> — a geometric, futuristic display font used by NASA-adjacent branding — paired with <strong>Exo 2</strong> for clean, readable body text. Buttons use a chamfered clip-path that evokes the angular aesthetics of real spacecraft panels. Every interactive element glows on hover, as if powered by the same energy as the stars.</p>
+        <p>Scroll-triggered animations bring each section into view gradually, mimicking the slow, breathtaking reveal of a planet rising over a horizon. The site was designed to feel cinematic — like a journey, not just a webpage.</p>
+      </div>
+    </div>
+
+    <!-- Tech stack -->
+    <div class="about-tech reveal">
+      <div class="section-label" style="margin-bottom:1.5rem;">Under the Hood</div>
+      <h3 class="about-block-title" style="margin-bottom:2rem;font-family:'Orbitron',monospace;font-size:1.3rem;">Technologies Used</h3>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="tech-badge">HTML5</div>
+          <p>Semantic, accessible markup structuring every section, card, and interactive element of the site.</p>
+        </div>
+        <div class="tech-item">
+          <div class="tech-badge">CSS3</div>
+          <p>Custom properties, keyframe animations, clip-path buttons, CSS-rendered planets, parallax effects, grid and flexbox layouts — all without a single CSS framework.</p>
+        </div>
+        <div class="tech-item">
+          <div class="tech-badge">JavaScript</div>
+          <p>Vanilla JS powers the live starfield generator, mouse-tracking parallax, IntersectionObserver scroll reveals, and the interactive planet explorer switcher.</p>
+        </div>
+        <div class="tech-item">
+          <div class="tech-badge">Google Fonts</div>
+          <p>Orbitron (900, 700, 400) and Exo 2 (300–600) loaded via Google Fonts CDN for crisp, futuristic typography at every weight.</p>
+        </div>
+        <div class="tech-item">
+          <div class="tech-badge">CSS Animations</div>
+          <p>All planet orbits, the pulsing sun, floating planet spheres, twinkling stars, and card hover effects are driven entirely by CSS @keyframes — zero animation libraries needed.</p>
+        </div>
+        <div class="tech-item">
+          <div class="tech-badge">IntersectionObserver</div>
+          <p>Native browser API used to trigger scroll-based reveal animations as sections enter the viewport, keeping the site lightweight and performant.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data sources -->
+    <div class="about-block reveal">
+      <div class="about-block-icon">📡</div>
+      <div class="about-block-body">
+        <h3 class="about-block-title">Data &amp; Accuracy</h3>
+        <p>All planetary data — distances, diameters, temperatures, gravitational values, moon counts, and orbital periods — is sourced from <strong>NASA</strong> (National Aeronautics and Space Administration) and <strong>ESA</strong> (European Space Agency) public databases. Mission facts are cross-referenced against official mission archives.</p>
+        <p>Spacecraft specifications are sourced from official manufacturer documentation including NASA technical reports and SpaceX mission documentation. Astronaut biographies are based on official NASA astronaut profiles. We are committed to scientific accuracy while presenting information in an engaging, human-centred format.</p>
+      </div>
+    </div>
+
+    <!-- Who it's for -->
+    <div class="about-audience reveal">
+      <div class="section-label" style="margin-bottom:1.5rem;">Who Is This For?</div>
+      <div class="audience-grid">
+        <div class="audience-card">
+          <div class="audience-icon">🧒</div>
+          <h4>Students &amp; Kids</h4>
+          <p>Visual, interactive, and jargon-free — perfect for young learners discovering space science for the first time.</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-icon">🔭</div>
+          <h4>Space Enthusiasts</h4>
+          <p>A rich reference for hobbyists who want quick access to accurate data about planets, missions, and spacecraft in one beautiful place.</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-icon">💻</div>
+          <h4>Web Developers</h4>
+          <p>A showcase of what's possible with pure HTML, CSS and JavaScript — no frameworks, no libraries, just clean code and creative design.</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-icon">🌍</div>
+          <h4>Everyone</h4>
+          <p>Because space belongs to all of humanity. You don't need a science degree to be moved by the scale and beauty of the universe.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="contact-feedback">
+    <h2>🚀 Contact & Feedback</h2>
+
+    <form id="feedbackForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <input type="email" id="email" placeholder="Your Email" required>
+
+        <textarea id="message" rows="5"
+            placeholder="Share your feedback or message..."
+            required></textarea>
+
+        <div class="rating">
+            <label>Rate COSMOQUEST:</label>
+            <select id="rating">
+                <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ Excellent</option>
+                <option value="⭐⭐⭐⭐">⭐⭐⭐⭐ Good</option>
+                <option value="⭐⭐⭐">⭐⭐⭐ Average</option>
+                <option value="⭐⭐">⭐⭐ Poor</option>
+                <option value="⭐">⭐ Very Poor</option>
+            </select>
+        </div>
+
+        <button type="submit">Send Feedback</button>
+    </form>
+
+    <div id="successMessage"></div>
+</section>
+
+<footer>
+  <div class="footer-logo">COSMO<span>QUEST</span></div>
+  <ul class="footer-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#planets">Planets</a></li>
+    <li><a href="#missions">Missions</a></li>
+    <li><a href="#astronauts">Astronauts</a></li>
+    <li><a href="#spacecraft">Spacecraft</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 CosmoQuest · Explore the Universe · Data sourced from NASA &amp; ESA</div>
+  <div class="footer-copy">© All Right Reserved | Designed &#9824; by Yogesh Yadav |B.tech | CSE.</div>
+</footer>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
